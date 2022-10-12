@@ -16,8 +16,8 @@ export class ApiService {
   //stockUrl = 'http://localhost:8082/api/v1.0/market/stock';
 
   //Azure URLs
-  companyUrl = 'http://company.eastus.azurecontainer.io:8081/api/v1.0/market/company';
-  stockUrl = 'http://stock.eastus.azurecontainer.io:8082/api/v1.0/market/stock';
+  companyUrl = 'http://company.fzhzfxafbda9fhbw.canadacentral.azurecontainer.io:8081/api/v1.0/market/company';
+  stockUrl = 'http://stock.hsf2huftcxdxg3d7.canadacentral.azurecontainer.io:8082/api/v1.0/market/stock';
 
   registerSuccess: boolean = false;
   companyResponse: company = new company;
@@ -33,7 +33,7 @@ export class ApiService {
 
   //registerCompany using POST
   postCompany(companyRequest: any) {
-    return this.httpClient.post(this.companyUrl + '/register', companyRequest);
+    return this.httpClient.post(this.companyUrl + '/register', companyRequest, {responseType: 'text'} );
   }
 
   //get all company
@@ -54,7 +54,7 @@ export class ApiService {
   }
 
   deleteCompany(companyCode: string) {
-    return this.httpClient.delete(this.companyUrl + '/delete/' + companyCode);
+    return this.httpClient.delete(this.companyUrl + '/delete/' + companyCode, {responseType: 'text'});
   }
 
 }
