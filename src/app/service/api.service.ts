@@ -16,7 +16,7 @@ export class ApiService {
   //stockUrl = 'http://localhost:8082/api/v1.0/market/stock';
 
   //Azure URLs
-  companyUrl = 'http://company.fzhzfxafbda9fhbw.canadacentral.azurecontainer.io:8081/api/v1.0/market/company';
+  companyUrl = 'http://companyv1.ehcjgqhxb2axagda.canadacentral.azurecontainer.io:8081/api/v1.0/market/company';
   stockUrl = 'http://stock.hsf2huftcxdxg3d7.canadacentral.azurecontainer.io:8082/api/v1.0/market/stock';
 
   registerSuccess: boolean = false;
